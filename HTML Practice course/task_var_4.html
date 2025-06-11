@@ -1,0 +1,75 @@
+      
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница с изображениями</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 40px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+        }
+        .image-container {
+            margin-bottom: 40px;
+        }
+        h2 {
+            font-size: 1.2em;
+            color: #555;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 3px solid #ccc;
+            border-radius: 8px;
+            padding: 5px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        img[src="wrong/path/to/image.jpg"] {
+            display: inline-block;
+            min-height: 100px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border: 3px dashed #d9534f;
+            color: #d9534f;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Демонстрация работы изображений в HTML</h1>
+
+    <div class="image-container">
+        <h2>1. Корректно загруженное изображение</h2>
+        <p>Это изображение имеет правильный путь в атрибуте <code>src</code> и загружается без проблем.</p>
+        <img src="https://via.placeholder.com/400x200?text=Корректное+изображение" 
+             alt="Это корректно загруженное изображение">
+    </div>
+
+    <div class="image-container">
+        <h2>2. Изображение с неверным путем (отображается alt текст)</h2>
+        <p>Здесь в атрибуте <code>src</code> указан несуществующий путь. Браузер не может найти файл и вместо него отображает текст из атрибута <code>alt</code>.</p>
+        <img src="wrong/path/to/image.jpg" 
+             alt="Здесь должно было быть изображение, но путь к нему неверный.">
+    </div>
+
+    <div class="image-container">
+        <h2>3. Изображение, обернутое в ссылку (кликабельно)</h2>
+        <p>Изображение помещено внутрь тега <code><a></code>. При нажатии на него вы перейдете по указанному URL.</p>
+        <a href="https://ya.ru" target="_blank">
+            <img src="https://via.placeholder.com/400x200?text=Изображение-ссылка+(нажми+меня)" 
+                 alt="Изображение-ссылка (ведёт на главную страницу Яндекс)">
+        </a>
+    </div>
+
+</body>
+</html>
