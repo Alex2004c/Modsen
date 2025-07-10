@@ -1,0 +1,56 @@
+body[data-theme="light"] {
+    --primary-color: #F17900;
+    --secondary-color: #343333;
+    --body-bg-color: #FFFFFF;
+    --text-color: #393939;
+    --text-color-light: #E0E0E0;
+    --text-color-dark: #FFFFFF;
+    --header-bg: linear-gradient(90deg, #343333 38.05%, #484848 69.22%, #282828 98.98%);
+    --search-bg: #F9F9F9;
+    --border-color: #BDBDBD;
+}
+
+body[data-theme="dark"] {
+    --primary-color: #F17900;
+    --secondary-color: #E0E0E0;
+    --body-bg-color: #121212;
+    --text-color: #E0E0E0;
+    --text-color-light: #BDBDBD;
+    --text-color-dark: #FFFFFF;
+    --header-bg: #1F1F1F;
+    --search-bg: #2A2A2A;
+    --border-color: #444444;
+}
+
+body[data-theme="colorful"] {
+    --primary-color: #4A90E2;
+    --secondary-color: #D0021B;
+    --body-bg-color: #F0F8FF;
+    --text-color: #2F4F4F;
+    --text-color-light: #E0E0E0;
+    --text-color-dark: #FFFFFF;
+    --header-bg: linear-gradient(90deg, #4A90E2 0%, #7ED321 100%);
+    --search-bg: #FFFFFF;
+    --border-color: #4A90E2;
+}
+
+.theme-switcher {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color var(--transition-fast);
+}
+
+.theme-switcher:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.theme-switcher img {
+    width: 24px;
+    height: 24px;
+}
